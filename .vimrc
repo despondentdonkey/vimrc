@@ -31,7 +31,9 @@ endfunction
 
 set completeopt=longest,menu,preview
 
-
+" Fast Session saving/loading
+nmap <F5> :mksession!<CR>
+nmap <F9> :source Session.vim<CR>
 
 " vimlocalrc plugin config
 " let g:localvimrc_ask=0
