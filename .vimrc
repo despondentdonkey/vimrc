@@ -103,13 +103,9 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" Shortcuts for file explorers
-map <leader>ex :Ex<c>
-map <leader>eh :Sex<cr>
-map <leader>ev :Sex!<cr>
-
 " Easy copy/paste to clipboard
 nmap <leader>y "+y
+nmap <leader>d "+d
 nmap <leader>p "+p
 nmap <leader>P "+P
 
