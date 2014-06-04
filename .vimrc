@@ -14,8 +14,10 @@ set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
 " Set fs, vs file extensions to use C syntax. These files are for GLSL.
-autocmd BufEnter,BufNew *.fs set syntax=c
-autocmd BufEnter,BufNew *.vs set syntax=c
+autocmd BufEnter,BufNew *.fs,*.vs set syntax=c
+
+" Set 2 space indent for ruby files. Use ftplugin when this gets more complex or when more languages are needed.
+autocmd FileType ruby,eruby setlocal shiftwidth=2 tabstop=2
 
 " Hide menu bar, toolbar, and scroll bars. (mTrl)
 set guioptions=i
