@@ -17,7 +17,7 @@ set ssop-=folds      " do not store folds
 autocmd BufEnter,BufNew *.fs,*.vs set syntax=c
 
 " Set 2 space indent for ruby files. Use ftplugin when this gets more complex or when more languages are needed.
-autocmd FileType ruby,eruby,lua setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby,eruby,lua,yaml setlocal shiftwidth=2 tabstop=2
 
 " Hide menu bar, toolbar, and scroll bars. (mTrl)
 set guioptions=i
@@ -36,6 +36,9 @@ set completeopt=longest,menu,preview
 " Fast Session saving/loading
 nmap <F5> :mksession!<CR>
 nmap <F9> :source Session.vim<CR>
+
+" Resize splits when the window is resized
+autocmd VimResized * exe "normal! \<c-w>="
 
 " vimlocalrc plugin config
 " let g:localvimrc_ask=0
@@ -115,6 +118,17 @@ vmap <leader>y "+y
 vmap <leader>d "+d
 vmap <leader>p "+p
 vmap <leader>P "+P
+
+" Window splitting
+nmap <leader>v :vertical split<cr>
+nmap <leader>h :split<cr>
+
+" Space to toggle folds
+nnoremap <space> za
+vnoremap <space> za
+
+" Close other folds except the current one
+nnoremap <leader>z zMzvzz
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
